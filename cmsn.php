@@ -37,8 +37,7 @@ function sendpost($ID,$token,$name){
     switch(rand(1,20)){
     case(1): $loichuc = ""; break;
     case(2): $loichuc = "Hôm nay không như ngày hôm qua, hôm nay là một ngày đặc biệt, là ngày mà một thiên thần đáng yêu đã có mặt trên thế giới này. Chúc ".$name." luôn mỉm cười và may mắn nhé"; break;
-    case(3): $loichuc = "Mừng ngày sinh nhật của ".$name.", mừng ngày đó ".$name." sinh ra đời cùng ngàn ngôi sao tỏa sáng.
-"; break;
+    case(3): $loichuc = "Mừng ngày sinh nhật của ".$name.", mừng ngày đó ".$name." sinh ra đời cùng ngàn ngôi sao tỏa sáng."; break;
     case(4): $loichuc = "Happy Birth Day to ".$name." nhé <3"; break;
     case(5): $loichuc = "Hi ! , Chúc ".$name." có một ngày sinh nhật vui vẻ ! <3"; break;
     case(6): $loichuc = "Chúc mừng sinh nhật ".$name.""; break;
