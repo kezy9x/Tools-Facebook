@@ -11,6 +11,7 @@ $token = array("token 1","token 2");// cho token vào đây
 $block = array("id 1","id 2"); // điền ID người mà bạn không muốn chúc tại đây
 
 for($i=0;$i<count($token);$i++){
+	echo "-------------$token số [$i]---------------<br>";
 $friends = json_decode(file_get_contents('https://graph.facebook.com/me/friends/?fields=birthday,name&access_token='.$token[$i]), true); // lấy dữ liệu bạn bè
 $afriends = $friends[data]; //Lọc lấy danh sách
 if($afriends != null){
@@ -28,6 +29,7 @@ for ($j=0; $j<count($afriends); $j++){ // duyệt danh sách bạn bè
 }else{
 	echo "Kiểm tra lại token số $i";
 }
+	echo "--------------------------------------<br>";
 }
 
 function sendpost($ID,$token,$name){
@@ -65,5 +67,7 @@ function sendpost($ID,$token,$name){
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
     curl_exec($ch);
     curl_close($ch);
+	echo "Đã gửi lời chúc đến ".$name."<br>";
+	
 }   
 ?>
