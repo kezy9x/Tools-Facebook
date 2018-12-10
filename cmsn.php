@@ -2,21 +2,17 @@
 date_default_timezone_set('Asia/Ho_Chi_Minh'); // lấy thời gian của việt nam
 set_time_limit(0);
 error_reporting(0);
-
 $day = date("d"); // lấy ngày hôm nay
 $month = date("m"); // lấy tháng hôm nay 
-
 $token = array("token 1","token 2");// cho token vào đây
-
 $block = array("id 1","id 2"); // điền ID người mà bạn không muốn chúc tại đây
-
 for($i=0;$i<count($token);$i++){
-	echo "-------------$token số [$i]---------------<br>";
+    echo "-------------token số [$i]---------------<br>";
 $friends = json_decode(file_get_contents('https://graph.facebook.com/me/friends/?fields=birthday,name&access_token='.$token[$i]), true); // lấy dữ liệu bạn bè
 $afriends = $friends[data]; //Lọc lấy danh sách
 if($afriends != null){
 for ($j=0; $j<count($afriends); $j++){ // duyệt danh sách bạn bè
-	if(!in_array($afriends[$j][id],$block)){ // kiểm tra xem có trong danh sách block hay k
+    if(!in_array($afriends[$j][id],$block)){ // kiểm tra xem có trong danh sách block hay k
     $birthday = $afriends[$j][birthday];
     $birthday = explode("/",$birthday);
     if(($day != $birthday[1]) || ($month != $birthday[0])){
@@ -27,15 +23,13 @@ for ($j=0; $j<count($afriends); $j++){ // duyệt danh sách bạn bè
     }
 }
 }else{
-	echo "Kiểm tra lại token số $i";
+    echo "Kiểm tra lại token số $i<br>";
 }
-	echo "--------------------------------------<br>";
+    echo "-------------------------------------------<br><br>";
 }
-
 function sendpost($ID,$token,$name){
     $imgsend = array('https://i.imgur.com/66joWuK.jpg','https://i.imgur.com/ugvmmXD.jpg','https://i.imgur.com/ybtk04S.jpg','https://i.imgur.com/ucpSogL.jpg','https://i.imgur.com/4fzwZvK.jpg','https://i.imgur.com/MRSy290.jpg','https://i.imgur.com/rmea27E.jpg','https://i.imgur.com/ue98LBP.jpg','https://i.imgur.com/4FbmqPa.jpg','https://i.imgur.com/kpHrprI.jpg');
     $img = $imgsend[rand(0,count($imgsend)-1)];
-
     switch(rand(1,21)){
     case(1): $loichuc = ""; break;
     case(2): $loichuc = "Hôm nay không như ngày hôm qua, hôm nay là một ngày đặc biệt, là ngày mà một thiên thần đáng yêu đã có mặt trên thế giới này. Chúc ".$name." luôn mỉm cười và may mắn nhé"; break;
@@ -61,13 +55,12 @@ function sendpost($ID,$token,$name){
     }
     $data = array("url" => $img, "caption" => $loichuc);
     $ch = curl_init("https://graph.facebook.com/v3.0/".$ID."/photos?&access_token=".$token."");
-
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
     curl_exec($ch);
     curl_close($ch);
-	echo "Đã gửi lời chúc đến ".$name."<br>";
-	
+    echo "Đã gửi lời chúc đến ".$name."<br>";
+    
 }   
 ?>
