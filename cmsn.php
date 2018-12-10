@@ -58,7 +58,7 @@ function sendpost($ID,$token,$name){
     case(19): $loichuc="Chúc bạn luôn luôn 'vui vẻ, tươi trẻ, mạnh khoẻ, tính tình mát mẻ, cuộc đời suôn sẻ' và luôn luôn 'tươi cười, yêu đời, ngời ngời sức sống'"; break;
     case(20): $loichuc = "Chúc mọi điều ước trong ngày sinh nhật của bạn đều trở thành hiện thực, hãy thổi nến trên bánh sinh nhật để ước mơ được nhiệm màu."; break;
     }
-    
+}
     $data = array("url" => $img, "caption" => $loichuc);
     $ch = curl_init("https://graph.facebook.com/v3.0/".$ID."/photos?&access_token=".$token."");
 
