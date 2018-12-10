@@ -34,7 +34,7 @@ function sendpost($ID,$token,$name){
     $imgsend = array('https://i.imgur.com/66joWuK.jpg','https://i.imgur.com/ugvmmXD.jpg','https://i.imgur.com/ybtk04S.jpg','https://i.imgur.com/ucpSogL.jpg','https://i.imgur.com/4fzwZvK.jpg','https://i.imgur.com/MRSy290.jpg','https://i.imgur.com/rmea27E.jpg','https://i.imgur.com/ue98LBP.jpg','https://i.imgur.com/4FbmqPa.jpg','https://i.imgur.com/kpHrprI.jpg');
     $img = $imgsend[rand(0,count($imgsend)-1)];
 
-    switch(rand(1,20)){
+    switch(rand(1,21)){
     case(1): $loichuc = ""; break;
     case(2): $loichuc = "Hôm nay không như ngày hôm qua, hôm nay là một ngày đặc biệt, là ngày mà một thiên thần đáng yêu đã có mặt trên thế giới này. Chúc ".$name." luôn mỉm cười và may mắn nhé"; break;
     case(3): $loichuc = "Mừng ngày sinh nhật của ".$name.", mừng ngày đó ".$name." sinh ra đời cùng ngàn ngôi sao tỏa sáng."; break;
