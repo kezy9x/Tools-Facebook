@@ -23,7 +23,7 @@ for ($j=0; $j<count($afriends); $j++){ // duyệt danh sách bạn bè
     }
 }
 }else{
-    echo "Kiểm tra lại token số $i<br>";
+    echo "=> Kiểm tra lại token số $i<br>";
 }
     echo "-------------------------------------------<br><br>";
 }
@@ -60,7 +60,7 @@ function sendpost($ID,$token,$name){
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
     curl_exec($ch);
     curl_close($ch);
-    echo "Đã gửi lời chúc đến ".$name."<br>";
+    echo "+ Đã gửi lời chúc đến ".$name."<br>";
     
 }   
 ?>
