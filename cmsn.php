@@ -55,7 +55,7 @@ function sendpost($ID,$token,$name){
     case(16):$loichuc = "Hôm nay ".$day." Tháng ".$month."\nChúc Mừng Bạn được sinh ra trong đời\nChúc bạn vui vẻ thảnh thơi\nSức khỏe tuyệt vời, cuộc sống an khang\nChúc bạn kiến thức vững vàng\nGiúp bạn phát triển hành trang ngành nghề\nChúc bạn thỏa chí đam mê\nThành công, thành đạt tràn trề ước mơ."; break;
     case(17): $loichuc = "Sinh nhật vui vẻ, 1 ngày lượm được cọc tiền, 1 tuần lượm được túi tiền, 1 tháng lượm được va li tiền, cả năm ôm tiền mà ngủ."; break;
     case(18): $loichuc = "Thay mặt Chủ tịch nước,\nChủ tịch quốc hội,\nCác Bộ trưởng, các ban ngành,\n84 triệu người Việt Nam,\n6 tỷ dân trên thế giới,\nChúc mừng ngày sinh của thiên thần đáng yêu nhất!"; break;
-    case(19): $loichuc="Chúc bạn luôn luôn 'vui vẻ, tươi trẻ, mạnh khoẻ, tính tình mát mẻ, cuộc đời suôn sẻ” và luôn luôn “tươi cười, yêu đời, ngời ngời sức sống'"; break;
+    case(19): $loichuc="Chúc bạn luôn luôn 'vui vẻ, tươi trẻ, mạnh khoẻ, tính tình mát mẻ, cuộc đời suôn sẻ' và luôn luôn 'tươi cười, yêu đời, ngời ngời sức sống'"; break;
     case(20): $loichuc = "Chúc mọi điều ước trong ngày sinh nhật của bạn đều trở thành hiện thực, hãy thổi nến trên bánh sinh nhật để ước mơ được nhiệm màu."; break;
     }
     
