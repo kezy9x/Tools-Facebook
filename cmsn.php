@@ -60,7 +60,7 @@ function sendpost($ID,$token,$name){
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
     curl_exec($ch);
     curl_close($ch);
-    echo "+ Đã gửi lời chúc đến ".$name."<br>";
+    echo "+ Đã gửi lời chúc đến <a href='https://facebook.com/".$ID."'>".$name."</a><br>";
     
 }   
 ?>
