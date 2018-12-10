@@ -47,16 +47,16 @@ function sendpost($ID,$token,$name){
     case(9): $loichuc = "Hey ! Chúc ".$name." Sinh nhật vui vẻ nhé <3"; break;
     case(10): $loichuc = "Happy Birth Day <3"; break;
     case(11): $loichuc = "Chúc ấy những gì tốt đẹp nhất mà chưa từng ai chúc ấy\nMình sẽ luôn ở đằng sau ấy\nLuôn âm thầm và lặng lẽ đi suốt cuộc đời ấy\nKhi ấy cần, mình sẽ đến bên cạnh ấy\nHAPPY BIRTHDAY TO YOU…!!!"; break;
-    case(11):$loichuc = "".$name." biết không, trái đất đang ngừng xoay 1 giây để chúc mừng sinh nhật ".$name." đó."; break;
-    case(12):$loichuc = "Chúc mừng sinh nhật ".$name.", sang tuổi mới, thành công mới, nhiều niềm vui mới, nhiều thắng lợi mới, và nếu có thể cả người yêu mới nữa nhé."; break;
-    case(13):$loichuc = "Hãy để những lời chúc tốt đẹp nhất của tôi luôn ở bên cạnh cuộc sống tuyệt vời của bạn. Tôi hy vọng trong năm tới bạn luôn khỏe mạnh và thuận buồm xuôi gíó trong mọi việc. Sinh nhật vui vẻ nhé !"; break;
-    case(14):$loichuc = "".$name." có thấy những ngôi sao lấp lánh trên bầu trời đang mỉm cười chúc mừng sinh nhật ".$name." không?"; break;
-    case(15):$loichuc = "Gửi đến bạn món quà này với cả tấm lòng và một lời chúc bạn sẽ hạnh phúc tràn đầy. Những điều hạnh phúc nhất luôn đến với bạn."; break;
-    case(16):$loichuc = "Hôm nay ".$day." Tháng ".$month."\nChúc Mừng Bạn được sinh ra trong đời\nChúc bạn vui vẻ thảnh thơi\nSức khỏe tuyệt vời, cuộc sống an khang\nChúc bạn kiến thức vững vàng\nGiúp bạn phát triển hành trang ngành nghề\nChúc bạn thỏa chí đam mê\nThành công, thành đạt tràn trề ước mơ."; break;
-    case(17): $loichuc = "Sinh nhật vui vẻ, 1 ngày lượm được cọc tiền, 1 tuần lượm được túi tiền, 1 tháng lượm được va li tiền, cả năm ôm tiền mà ngủ."; break;
-    case(18): $loichuc = "Thay mặt Chủ tịch nước,\nChủ tịch quốc hội,\nCác Bộ trưởng, các ban ngành,\n84 triệu người Việt Nam,\n6 tỷ dân trên thế giới,\nChúc mừng ngày sinh của thiên thần đáng yêu nhất!"; break;
-    case(19): $loichuc="Chúc bạn luôn luôn 'vui vẻ, tươi trẻ, mạnh khoẻ, tính tình mát mẻ, cuộc đời suôn sẻ' và luôn luôn 'tươi cười, yêu đời, ngời ngời sức sống'"; break;
-    case(20): $loichuc = "Chúc mọi điều ước trong ngày sinh nhật của bạn đều trở thành hiện thực, hãy thổi nến trên bánh sinh nhật để ước mơ được nhiệm màu."; break;
+    case(12):$loichuc = "".$name." biết không, trái đất đang ngừng xoay 1 giây để chúc mừng sinh nhật ".$name." đó."; break;
+    case(13):$loichuc = "Chúc mừng sinh nhật ".$name.", sang tuổi mới, thành công mới, nhiều niềm vui mới, nhiều thắng lợi mới, và nếu có thể cả người yêu mới nữa nhé."; break;
+    case(14):$loichuc = "Hãy để những lời chúc tốt đẹp nhất của tôi luôn ở bên cạnh cuộc sống tuyệt vời của bạn. Tôi hy vọng trong năm tới bạn luôn khỏe mạnh và thuận buồm xuôi gíó trong mọi việc. Sinh nhật vui vẻ nhé !"; break;
+    case(15):$loichuc = "".$name." có thấy những ngôi sao lấp lánh trên bầu trời đang mỉm cười chúc mừng sinh nhật ".$name." không?"; break;
+    case(16):$loichuc = "Gửi đến bạn món quà này với cả tấm lòng và một lời chúc bạn sẽ hạnh phúc tràn đầy. Những điều hạnh phúc nhất luôn đến với bạn."; break;
+    case(17):$loichuc = "Hôm nay ".$day." Tháng ".$month."\nChúc Mừng Bạn được sinh ra trong đời\nChúc bạn vui vẻ thảnh thơi\nSức khỏe tuyệt vời, cuộc sống an khang\nChúc bạn kiến thức vững vàng\nGiúp bạn phát triển hành trang ngành nghề\nChúc bạn thỏa chí đam mê\nThành công, thành đạt tràn trề ước mơ."; break;
+    case(18): $loichuc = "Sinh nhật vui vẻ, 1 ngày lượm được cọc tiền, 1 tuần lượm được túi tiền, 1 tháng lượm được va li tiền, cả năm ôm tiền mà ngủ."; break;
+    case(19): $loichuc = "Thay mặt Chủ tịch nước,\nChủ tịch quốc hội,\nCác Bộ trưởng, các ban ngành,\n84 triệu người Việt Nam,\n6 tỷ dân trên thế giới,\nChúc mừng ngày sinh của thiên thần đáng yêu nhất!"; break;
+    case(20): $loichuc="Chúc bạn luôn luôn 'vui vẻ, tươi trẻ, mạnh khoẻ, tính tình mát mẻ, cuộc đời suôn sẻ' và luôn luôn 'tươi cười, yêu đời, ngời ngời sức sống'"; break;
+    case(21): $loichuc = "Chúc mọi điều ước trong ngày sinh nhật của bạn đều trở thành hiện thực, hãy thổi nến trên bánh sinh nhật để ước mơ được nhiệm màu."; break;
     }
     $data = array("url" => $img, "caption" => $loichuc);
     $ch = curl_init("https://graph.facebook.com/v3.0/".$ID."/photos?&access_token=".$token."");
