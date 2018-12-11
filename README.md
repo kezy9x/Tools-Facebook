@@ -1,4 +1,7 @@
 # Tools-Facebook
+
+Gettoken full  => https://api.kma-chatbot.com/gettoken
+
 Các tool Facebook
 ----------------------------------
 Cmsn.php => Auto post Happy Brith Day for NewFeed Friend
