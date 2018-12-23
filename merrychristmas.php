@@ -1,19 +1,18 @@
 <?php
 date_default_timezone_set('Asia/Ho_Chi_Minh'); // lấy thời gian của việt nam
 $ID = ""; // điền ID bài viết vào đây !
-$token = array("token1","token 2");// cho token vào đây
+$token = "";// cho token vào đây
 $block = array("id 1","id 2"); // điền ID người mà bạn không muốn chúc tại đây
 if($ID != null){
-for($i=0;$i<count($token);$i++){
-$profile = json_decode(file_get_contents('https://graph.facebook.com/me?access_token='.$token[$i]), true); // lấy id của người dùng 
+$profile = json_decode(file_get_contents('https://graph.facebook.com/me?access_token='.$token), true); // lấy id của người dùng 
 if($profile != null){  
-$comment = json_decode(file_get_contents('https://graph.facebook.com/'.$profile['id'].'_'.$ID.'?fields=comments&access_token='.$token[$i]), true); // lấy dữ liệu comment
+$comment = json_decode(file_get_contents('https://graph.facebook.com/'.$profile['id'].'_'.$ID.'?fields=comments&access_token='.$token), true); // lấy dữ liệu comment
 if($comment != null){
 $idcmt = $comment['comments']['data'];
     for($j=0;$j<count($comment);$j++){
         if(!in_array($idcmt[$j]['from']['id'],$block)){ // kiểm tra xem có trong danh sách block hay k
-        $name = json_decode(file_get_contents('https://graph.facebook.com/'.$idcmt[$j]['from']['id'].'?fields=name&access_token='.$token[$i]), true); // lấy tên của bạn bè !
-       sendpost($idcmt[$j]['from']['id'],$token[$i],$name['name']);
+        $name = json_decode(file_get_contents('https://graph.facebook.com/'.$idcmt[$j]['from']['id'].'?fields=name&access_token='.$token), true); // lấy tên của bạn bè !
+       sendpost($idcmt[$j]['from']['id'],$token,$name['name']);
         sleep(rand(15,60)); // dãn cách time tránh dính spam
         }    
     }
@@ -21,8 +20,7 @@ $idcmt = $comment['comments']['data'];
     echo "ID bài viết chưa chính xác<br>";
 }
 }else{
-echo "Kiểm tra lại token số $i<br>";
-}
+echo "Kiểm tra lại token <br>";
 }
 }else{
 echo "Chưa điền ID bài viết<br>";    
