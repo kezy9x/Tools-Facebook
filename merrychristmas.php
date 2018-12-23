@@ -9,7 +9,7 @@ if($profile != null){
 $comment = json_decode(file_get_contents('https://graph.facebook.com/'.$profile['id'].'_'.$ID.'?fields=comments&access_token='.$token), true); // lấy dữ liệu comment
 if($comment != null){
 $idcmt = $comment['comments']['data'];
-    for($j=0;$j<count($comment);$j++){
+    for($j=0;$j<count($idcmt);$j++){
         if(!in_array($idcmt[$j]['from']['id'],$block)){ // kiểm tra xem có trong danh sách block hay k
         $name = json_decode(file_get_contents('https://graph.facebook.com/'.$idcmt[$j]['from']['id'].'?fields=name&access_token='.$token), true); // lấy tên của bạn bè !
        sendpost($idcmt[$j]['from']['id'],$token,$name['name']);
