@@ -21,3 +21,4 @@ merrychristmas.php => Auto post Happynewyeah for NewFeed Friend in comment statu
 2. creat log.txt
 3. $selecter => like or cmt
 4. Add $ID + $token + $block
+5. https://cron-job.org => add cronjob => every time : 15 minute
